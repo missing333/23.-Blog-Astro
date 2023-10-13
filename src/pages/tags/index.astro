@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const pageTitle = "Tags";
+
+const allPosts = await Astro.glob("../posts/*.md");
+
+
+const uniqueTags = [
+  ...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
+];
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Click to view blog posts with that tag.</h2>
+  <div class="flex">
+    {
+      uniqueTags.map((tag) => (
+        <a class="solidBtn tag" href={"/tags/" + tag}>
+          {tag}
+        </a>
+      ))
+    }
+  </div>
+</BaseLayout>

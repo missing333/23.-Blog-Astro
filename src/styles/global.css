@@ -1,5 +1,5 @@
 html {
-  background-color: #f1f5f9;
+  background-color: #ededed;
   font-family: sans-serif;
 }
 
@@ -13,6 +13,10 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+.solidBtn:hover{
+  transform: scale(1.05);
 }
 
 h1 {
@@ -31,14 +35,14 @@ h1 {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #ff9776;
+  background-color: purple;
 }
 
 .nav-links {
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #ff9776;
+  background-color: purple;
   display: none;
   margin: 0;
 }
@@ -46,21 +50,47 @@ h1 {
 .nav-links a {
   display: block;
   text-align: center;
-  padding: 10px 0;
+  padding: 5px 0;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+  border: 1px solid transparent;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  border: 1px solid purple;
+  border-radius: 10px;
 }
 
 .expanded {
   display: unset;
 }
+
+main{ 
+  min-height: 70vh;
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+  align-items: center;
+}
+
+.tag{
+color:#ededed;
+background-color: green;
+padding: 5px;
+border-radius: 10px;
+text-decoration: none;
+}
+
+.tag::before{
+  content:"#"
+}
+
 
 @media screen and (min-width: 636px) {
   .nav-links {
