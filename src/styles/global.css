@@ -38,8 +38,11 @@ h1 {
   background-color: purple;
 }
 
+nav{
+  width: fit-content;
+}
+
 .nav-links {
-  width: 100%;
   top: 5rem;
   left: 48px;
   background-color: purple;
@@ -91,13 +94,20 @@ text-decoration: none;
   content:"#"
 }
 
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
 
 @media screen and (min-width: 636px) {
   .nav-links {
     margin-left: 5em;
-    display: block;
+    display: inline-block;
     position: static;
-    width: auto;
     background: none;
   }
 
