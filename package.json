@@ -14,5 +14,9 @@
     "@astrojs/rss": "^3.0.0",
     "astro": "^3.3.0",
     "preact": "^10.18.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.6"
   }
 }

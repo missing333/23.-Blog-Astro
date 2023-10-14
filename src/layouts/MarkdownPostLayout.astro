@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { ViewTransitions } from "astro:transitions";
 const { frontmatter } = Astro.props;
 var url = false;
 try {
@@ -10,7 +11,7 @@ const tagLink = "../tags/";
 
 <BaseLayout>
   <h1>{frontmatter.title}</h1>
-  <p>
+  <p transition:animate="slide">
     Written by {frontmatter.author} on: {frontmatter.pubDate.slice(0, 10)}
   </p>
   <div class="flex" id="tags">
