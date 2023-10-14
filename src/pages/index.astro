@@ -7,13 +7,12 @@ const pageTitle = "Home Page";
 <BaseLayout pageTitle={pageTitle}>
   <h2 transition:animate="slide">My awesome blog subtitle</h2>
   <Greeting
-    client:load
+    client:visible
     messages={[
       "Hej",
       "Hallo",
       "Hola",
       "Habari",
-      "Hi",
       "Howdy",
       "Hello",
       "Howzit",
@@ -23,11 +22,11 @@ const pageTitle = "Home Page";
       "Whoa",
       "Welcome",
       "Nice to have you",
-      "Encantado", 
-      "Bonjour", 
-      "Aybowan", 
-      "Sawasdi Ka", 
-      "Bwanji"
+      "Encantado",
+      "Bonjour",
+      "Aybowan",
+      "Sawasdi Ka",
+      "Bwanji",
     ]}
   />
   <p>I am creating a cool blog website.</p>
