@@ -1,12 +1,11 @@
 import { test, expect, type Page } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('http://localhost:4321/');
+  await page.goto('https://missildineblog.netlify.app/');
 });
 
 test.describe('New Greeting', () => {
   test('h3 should change with a button', async ({ page }) => {
-    await page.goto('http://localhost:4321/');
     const oldGreeting = await page.textContent("h3");
     console.log("old: " + oldGreeting);
   
