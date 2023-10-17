@@ -5,7 +5,7 @@ pubDate: 2023-10-13
 description: "This is the first post of my new Astro blog."
 author: "Marc"
 image:
-  url: "https://docs.astro.build/assets/full-logo-light.png"
+  url: "https://docs.astro.build/assets/full-logo-dark.png"
   alt: "The full Astro logo."
 tags: ["astro", "blogging", "learningInPublic", "coolTag"]
 ---

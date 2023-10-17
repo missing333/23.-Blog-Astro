@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
 import "../styles/global.css";
 const { pageTitle } = Astro.props;
+import { slide } from "astro:transitions";
 ---
 
 <html lang="en">
@@ -17,8 +18,8 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <main>
-      <h1 transition:animate="slide">{pageTitle}</h1>
+    <main transition:animate={slide({ duration: "0.3s" })}>
+      <h1>{pageTitle}</h1>
       <slot />
     </main>
     <Footer />

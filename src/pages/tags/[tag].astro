@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogCard from "../../components/BlogCard.astro";
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob("../posts/*.md");
@@ -27,15 +28,16 @@ const filteredPosts = posts.filter((post) =>
 
 <BaseLayout pageTitle={tag}>
   <p>Posts tagged with {tag}</p>
-  <ul>
+  <div id="blogGallery" class="flex">
     {
       filteredPosts.map((post) => (
-        <li>
-          <a href={post.url}>
-            {post.frontmatter.title}
-          </a>
-        </li>
+        <a href={post.url}>
+          <BlogCard
+            title={post.frontmatter.title}
+            summary={post.frontmatter.description}
+            url={post.frontmatter.image.url}
+          />
+        </a>
       ))
     }
-  </ul>
 </BaseLayout>

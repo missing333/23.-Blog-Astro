@@ -1,19 +1,31 @@
 ---
+import BlogCard from "../components/BlogCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { ViewTransitions } from "astro:transitions";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 
 const pageTitle = "Blog";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <ul>
+  <div id="blogGallery" class="flex">
     {
       allPosts.map((post) => (
-        <li transition:name={"blog"}>
-          <a href={post.url}>{post.frontmatter.title}</a>
-        </li>
+        <a href={post.url}>
+          <BlogCard
+            title={post.frontmatter.title}
+            summary={post.frontmatter.description}
+            url={post.frontmatter.image.url}
+          />
+        </a>
       ))
     }
-  </ul>
+  </div>
 </BaseLayout>
+
+<style>
+  a {
+    width: 250px;
+  }
+  a:hover {
+  }
+</style>

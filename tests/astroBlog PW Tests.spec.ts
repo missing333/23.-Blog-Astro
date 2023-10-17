@@ -14,7 +14,8 @@ test.describe('New Greeting', () => {
     const newGreeting = await page.textContent("h3");
     console.log("new: " + newGreeting);
   
-    expect(newGreeting).not.toBe(oldGreeting);
+    await expect(newGreeting).not.toBe(oldGreeting);
+    console.log("---End of test---");
   });
 
 });
