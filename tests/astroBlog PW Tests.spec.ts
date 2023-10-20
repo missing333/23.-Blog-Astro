@@ -7,14 +7,17 @@ test.beforeEach(async ({ page }) => {
 test.describe('New Greeting', () => {
   test('h3 should change with a button', async ({ page }) => {
     const oldGreeting = await page.textContent("h3");
-    await console.log("old: " + oldGreeting);
+    console.log("old greeting: " + oldGreeting);
+    expect(oldGreeting).toBe('Hi! Thank you for visiting!');
   
     await page.getByRole('button', { name: 'New Greeting' }).click();
-  
+    console.log("clicked button now.");
+      
     const newGreeting = await page.textContent("h3");
-    await console.log("new: " + newGreeting);
+    console.log("new greeting: " + newGreeting);
+    await page.waitForTimeout(300);
   
-    await expect(newGreeting).not.toBe(oldGreeting);
+    expect(newGreeting).not.toBe(oldGreeting);
     console.log("---End of test---");
   });
 
