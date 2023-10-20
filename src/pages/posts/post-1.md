@@ -10,6 +10,8 @@ image:
 tags: ["astro", "blogging", "learningInPublic", "coolTag"]
 ---
 
+[![Playwright Tests](https://github.com/missing333/23.-Blog-Astro/actions/workflows/playwright.yml/badge.svg)](https://github.com/missing333/23.-Blog-Astro/actions/workflows/playwright.yml)
+
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
 ## What I've accomplished

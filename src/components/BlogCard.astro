@@ -7,7 +7,7 @@ interface Props {
 const { url, title, summary } = Astro.props;
 ---
 
-<div class="blogCard">
+<div>
   {url && <img id="thumbnail" src={url} width="300" alt="" />}
   <div class="previewText">
     <h2>{title}</h2>

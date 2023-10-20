@@ -7,12 +7,12 @@ test.beforeEach(async ({ page }) => {
 test.describe('New Greeting', () => {
   test('h3 should change with a button', async ({ page }) => {
     const oldGreeting = await page.textContent("h3");
-    console.log("old: " + oldGreeting);
+    await console.log("old: " + oldGreeting);
   
     await page.getByRole('button', { name: 'New Greeting' }).click();
   
     const newGreeting = await page.textContent("h3");
-    console.log("new: " + newGreeting);
+    await console.log("new: " + newGreeting);
   
     await expect(newGreeting).not.toBe(oldGreeting);
     console.log("---End of test---");
@@ -49,3 +49,4 @@ test('tags link takes me to tags page',async ({page}) => {
   await page.getByRole('link', { name: 'tags' }).click();
   await expect(page).toHaveTitle(/Tags/);
 })
+

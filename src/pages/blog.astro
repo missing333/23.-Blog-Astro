@@ -10,7 +10,7 @@ const pageTitle = "Blog";
   <div id="blogGallery" class="flex">
     {
       allPosts.map((post) => (
-        <a href={post.url}>
+        <a class="blogCard" href={post.url}>
           <BlogCard
             title={post.frontmatter.title}
             summary={post.frontmatter.description}

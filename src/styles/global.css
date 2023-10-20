@@ -83,7 +83,8 @@ main{
   display: flex;
   flex-wrap: wrap;
   gap: 15px 10px;
-  align-items: flex-start;
+  align-items:stretch;
+  align-content: center;
   justify-content:space-around;
 }
 
