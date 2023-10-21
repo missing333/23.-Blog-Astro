@@ -31,13 +31,13 @@ const filteredPosts = posts.filter((post) =>
   <div id="blogGallery" class="flex">
     {
       filteredPosts.map((post) => (
-        <a href={post.url}>
-          <BlogCard
-            title={post.frontmatter.title}
-            summary={post.frontmatter.description}
-            url={post.frontmatter.image.url}
-          />
-        </a>
+        <BlogCard
+          title={post.frontmatter.title}
+          summary={post.frontmatter.description}
+          url={post.frontmatter.image.url}
+          path={post.url}
+        />
       ))
     }
+  </div>
 </BaseLayout>
